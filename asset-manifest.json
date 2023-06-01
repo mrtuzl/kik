@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/kik/static/css/main.4dfbcb00.css",
+    "main.js": "/kik/static/js/main.dd260da4.js",
+    "static/js/787.d2ca50b9.chunk.js": "/kik/static/js/787.d2ca50b9.chunk.js",
+    "static/media/slider-background.png": "/kik/static/media/slider-background.5bd8ceb20bd79ddd78b4.png",
+    "static/media/background.png": "/kik/static/media/background.3c2be7d112356b188add.png",
+    "index.html": "/kik/index.html",
+    "main.4dfbcb00.css.map": "/kik/static/css/main.4dfbcb00.css.map",
+    "main.dd260da4.js.map": "/kik/static/js/main.dd260da4.js.map",
+    "787.d2ca50b9.chunk.js.map": "/kik/static/js/787.d2ca50b9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4dfbcb00.css",
+    "static/js/main.dd260da4.js"
+  ]
+}
