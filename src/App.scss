@@ -1,0 +1,597 @@
+@import "rsuite/dist/rsuite.css";
+$font: 'Rubik', sans-serif;
+$red: #D8444F;
+$blue: #0D4D91;
+$lightblue: hsl(211, 91%, 95%);
+:root {
+    --swiper-pagination-color: #D8444F;
+    --swiper-pagination-bullet-size: 12px;
+    --swiper-pagination-bullet-width: 12px;
+    --swiper-pagination-bullet-height: 12px;
+    --swiper-pagination-bullet-inactive-color: #000;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-pagination-bullet-vertical-gap: 6px;
+  }
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: $font;
+}
+
+//Header CSS
+.hContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 15.5vh;
+    background-color: white;
+    z-index: 1;
+    .hWrapper{
+        background-color: $red;
+        display: flex;
+        justify-content: center;
+        color: white;
+        height: 4.5vh;
+
+        .header{
+            width: 70%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center; 
+          
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: 0.95rem;
+                font-weight: 500;
+                margin-left: 10px;
+            }
+           .img{
+            img{
+               height: 4.5vh;
+          }
+           }
+        }
+        .header > div {
+            margin: 0px 0px 0px 10px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        
+        }
+    }
+    .mWrapper{
+        height: 11vh;
+        display: flex;
+        justify-content: center;
+        .menu{
+            width: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: 'Rubik', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            img{
+                width: 180px;
+                cursor: pointer;
+                padding: 10px;
+            }
+            .navbar{
+                background-color: white; 
+            }
+            
+        }
+    }
+   
+}
+.fixed{
+    transition: .5s ease-in-out;
+    position: sticky;
+    top: 0;
+    height: 14vh;
+    box-shadow: rgba(86, 125, 199, 0.8) 2px 2px 5px;
+}
+//Slider CSS
+.swipe{
+    width: 100%;
+    height: 50vh;
+    background-image: url(./images/slider-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0;
+    .sContainer{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .slide{
+        width: 70%;
+        height: 30vh;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h1{
+            margin: 50px 0px 50px 0px;
+            font-size: 2.5rem;
+            line-height: 1.3;
+        }
+        span{
+            font-family: $font;
+            border: 1px solid white;
+            padding: 10px 25px 10px 25px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        span:hover{
+            border: 1px solid $red;
+            color: $red;
+            cursor: pointer;
+        }
+    }
+    .swiper-button-next{
+        color: $red;
+        padding: 0px 150px 150px 0px;
+}
+    .swiper-button-prev{
+        color: $red; 
+        padding: 0px 0px 150px 150px;
+} 
+.swiper-pagination {
+	position: absolute;
+	top: 60%;
+	right: 20%;
+	width: auto !important;
+	left: auto !important;
+}
+.swiper-pagination-bullet {
+	padding: 5px 10px;
+	border-radius: 0;
+	width: 12px;
+	height: 12px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 12px;
+	color:$red;
+	opacity: 1;
+	background: $blue;
+}
+.swiper-pagination-bullet-active {
+	color:#fff;
+	background: $red;
+    width: 30px;
+}
+}
+//Main CSS
+.mContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(./images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    padding: 50px 0px 50px 0px;
+    .main{
+        width: 70%;
+    }
+}
+// Duyurular CSS
+.dContainer{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0px 25px 0px;
+    .duyurular{
+        width: 75% ;
+        background-color: white;
+        .dTitle{
+            display: flex;
+            height: 6vh;
+            background-color: $blue;
+            color: white;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 20px 0px 20px;
+            cursor: pointer;
+            h1{
+                font-size: 1.4rem;
+          
+            }
+            span{
+                font-weight: 600;
+                
+            }
+        }
+        .dContent{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: auto;
+            .left{
+                width: 30%;
+               .kategori{
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 7vh;
+                background-color: hsl(195, 53%, 79%, 0.4);
+                margin: 10px 0px 0px 0px;
+                padding: 0px 0px 0px 50px;
+                color: $blue;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.5s ease;
+                span{
+                    margin: 0px 0px 0px 20px;
+                }
+               }
+               .kategori:hover {
+                background-color: $red;
+                color: white;
+              }
+              .duyuru{
+                background-color: $red;
+                color: white;
+              }
+            }
+            .right{
+                width: 65%;
+                overflow: auto;
+                h3{
+                    color: $blue;
+                    background-color: $lightblue;
+                    display: inline;
+                    font-size: 0.8rem;
+                    padding: 5px;
+                }
+                p{
+                    font-size: 0.95rem;
+                    padding: 2px;
+                    border-bottom: 1px solid $lightblue;
+                }
+                p:hover{
+                    color: $red;
+                    cursor:pointer;
+                }
+                .show{
+                    display:block;
+                }
+                .hidden{
+                    display: none;
+                }
+            }
+        }
+    }
+    .linkler{
+        width: 20%;
+        height: 44vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+     
+        .link{
+            width: 100%;
+            height: 10vh;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            span{
+                font-weight: 600;
+                font-size: 0.95rem;
+                color: #424656;
+            }
+            
+        }
+        .link:hover{
+            border-right: 5px solid $red;
+        }
+        .link:nth-last-child(1){
+            padding-right: 40px;
+        }
+    }
+}
+
+.icon{
+    background-color: #E9F3FE;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+// Kurul Kararları CSS
+    .ksContainer{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0px 0px 25px 0px;
+        .ksTitle{
+                display: flex;
+                align-items: center;
+                height: 6vh;
+                background-color: $blue;
+                color: white;
+                padding: 0px 20px 0px 20px;
+                margin: 0px 0px 25px 0px;
+                cursor: pointer;
+                h1{
+                    font-size: 1.4rem;
+                }
+        }
+        .ksContent{
+            display: flex;
+            justify-content: space-between;
+            .karar-sorgu{
+                width: 23%;
+                height: 14vh;
+                background-color: white;
+                transition: all 0.5s ease;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                span{
+                    font-size: 1rem;
+                    font-weight: 600;
+                    color: $blue;
+                    margin: 10px;
+                    text-align: center;
+                
+                }
+            }
+            .karar-sorgu:hover {
+                background-color: $red;
+                span{
+                    color: white;
+                }
+              }
+        }
+    }
+    // İstatistikler CSS
+
+    .iContainer{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0px 0px 25px 0px;
+        .iTitle{
+            display: flex;
+            align-items: center;
+            height: 6vh;
+            background-color: $blue;
+            color: white;
+            padding: 0px 0px 0px 20px;
+            margin: 0px 0px 25px 0px;
+            cursor: pointer;
+            h1{
+                font-size: 1.4rem;
+            }
+        .istatistikler{
+            width: 36%;
+          
+            }
+        .times{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 64%;
+            background-color: $lightblue;
+            color: $blue;
+            .time{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 26%;
+                height: 6vh;
+                h1{
+                    text-align: center;
+                    font-size: 1rem !important;
+                }
+            }
+            .timeActive{
+                background-color: $red;
+                color: white;
+            }
+        }
+    }
+            .iContent{
+                display: flex;
+                justify-content: space-between;
+                .istatistik{
+                    width: 18%;
+                    height: 30vh;
+                    background-color: white;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 20px;
+                    span{
+                        color: #424656;
+                        font-weight: 600;
+                        font-size: 16px;
+                        text-align: center;
+
+                    }
+                }
+                .istatistik:nth-child(1){
+                    border-bottom: 5px solid #256FB7;
+                    .circle{
+                        background-color: #256FB7;
+                        border: 20px solid #4A8ED1;
+                    }
+                    
+                }
+                .istatistik:nth-child(2){
+                    border-bottom: 5px solid #00CAD7;
+                    .circle{
+                        background-color: #00CAD7;
+                        border: 20px solid  #5DDDE5;
+                    }
+                }
+                .istatistik:nth-child(3){
+                    border-bottom: 5px solid #A52F43;
+                    .circle{
+                        background-color: #A52F43;
+                        border: 20px solid #EA4256;
+                    }
+                }
+                .istatistik:nth-child(4){
+                    border-bottom: 5px solid #0E4D91;
+                    .circle{
+                        background-color: #0E4D91;
+                        border: 20px solid #2760b0;
+                        font-size: 0.9rem !important;
+                   
+                    }
+                }
+                .istatistik:nth-child(5){
+                    border-bottom: 5px solid #00A288;
+                    .circle{
+                        background-color: #00A288;
+                        border: 20px solid #47B5A3;
+                    }
+
+                }
+                .circle{
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    margin-bottom: 25px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    text-align: center;
+                }
+            }
+    }
+    // Logolar CSS
+    .lContainer{
+        width: 100%;
+        height: 15.5vh;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .lWrapper{
+            width: 70%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+          
+                .logo{
+                filter: grayscale(100%);
+                height: 100% !important;
+                width: 100% !important;  
+                    }
+                .gazete{
+                width: 150px !important;
+                height: 50px !important;
+                    }
+                .logo:hover{
+                filter: none;
+                cursor: pointer;
+                    }
+     }
+    
+}
+  //Footer CSS
+  .fContainer{
+    width: 100%;
+    height: 50vh;
+    background-color: $blue;
+    display: flex;
+    justify-content: center;
+    color: white;
+    .fWrapper{
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 0px 50px 0px;
+        .footer{
+            display: flex;
+            flex-direction: column;
+            font-weight: 500;
+        
+            img{
+                width: 100px;
+            }
+            p{
+                padding: 0px 0px 0px 10px;
+                line-height: 1.5;
+            }
+            a{
+                text-decoration: none;
+                color: white;
+                margin-bottom: 15px;
+            }
+            h3{
+                margin: 0px 0px 10px 0px;
+            }
+            span{
+                font-size: 1.2rem;
+                padding: 30px 30px 0px 10px;
+            }
+            .medya > div{
+                margin: 10px;      
+                cursor: pointer;        
+            }
+          
+            
+        }
+        .footer > div {
+            display: flex;
+            margin: 10px 0px 10px 0px;
+          }
+          
+        .a{
+            width: 10%;
+          }
+        .b{
+            width: 15%;
+          }
+        .c{
+            width: 20%;
+          }
+        .d{
+            width: 20%;
+          }
+        .e{
+            padding-right: 100px;
+            width: 25%;
+            text-align: center;
+          }
+
+    
+    }
+}
+
+//Copyright CSS
+.cContainer{
+    width: 100%;
+    height: 5vh;
+    background-color: $red;
+    display: flex;
+    justify-content: center;
+    .cWrapper{
+       width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+}
